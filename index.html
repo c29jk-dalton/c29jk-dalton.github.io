@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#shelf{
+			background-image: url(data:image/jpeg;base64,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);
+			width: 1350px;
+			height: 700px;
+			background-size: contain;
+			position: absolute;
+			top: 150px;
+			left: 50px;
+		}
+		#title{
+			font-family: fantasy;
+			font-size: 125px;
+			width: 1000px;
+			height: 1000ox;
+			position: absolute;
+			top: 10px;
+			left: 20%;
+		}
+		#cat{
+			width: 500px;
+			height: 500px;
+			background-size: contain;
+			background-image: url(https://i.pinimg.com/originals/00/10/e2/0010e2e04218a7f9a46d55aadb5d2428.gif);
+			background-repeat: no-repeat;
+			position: absolute;
+			animation-name: move;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes move{
+			0%{
+				top: 70%;
+				right: 0px;
+			}
+			
+				
+			5%{
+				top: 70%;
+				right: 5%;
+				
+			}
+			
+			10%{
+				top: 70%;
+				right: 10%;
+				
+			}
+			15%{
+				top: 70%;
+				right: 15%;
+				
+			}
+			20%{
+				top: 70%;
+				right: 20%;
+				
+			}
+			25%{
+				top: 70%;
+				right: 25%;
+				
+			}
+			30%{
+				top: 70%;
+				right: 30%;
+				
+			}
+			35%{
+				top: 70%;
+				right: 35%;
+				
+			}
+			40%{
+				top: 70%;
+				right: 40%;
+				
+			}
+			45%{
+				top: 70%;
+				right: 45%;
+				
+			}
+			50%{
+				top: 70%;
+				right: 50%;
+			}
+			55%{
+				top: 70%;
+				right: 55%;
+			}
+			60%{
+				top: 70%;
+				right: 60%;
+			}
+			65%{
+				top: 70%;
+				right: 65%;
+			}
+			70%{
+				top: 70%;
+				right: 70%;
+			}
+			75%{
+				top: 70%;
+				right: 75%;
+			}
+			70%{
+				top: 70%;
+				right: 70%;
+			}
+			85%{
+				top: 70%;
+				right: 85%;
+			}
+			90%{
+				top: 70%;
+				right: 90%;
+			}
+			95%{
+				top: 70%;
+				right: 95%;
+			}
+			100%{
+				top: 70%;
+				right: 100%;
+			}
+
+		}
+		body{
+			background-color: lavender;
+			/*font-family: cursive;
+			font-size: 50px;
+			color: mediumpurple;
+		}
+		a{
+			text-decoration: none;
+		}
+		#title{
+			font-size: 70px;
+			color: rebeccapurple;*/
+		}
+
+		#book {
+			    width: 40px;
+    height: 200px;
+    background-color: rgb(238, 124, 121);
+    position: absolute;
+    top: 190px;
+    left: 67px;
+		}
+		#book1 {
+			    width: 40px;
+    height: 200px;
+    background-color: rgb(233, 147, 85);
+    position: absolute;
+    top: 190px;
+    left: 110px;
+		}
+		#book2 {
+			    width: 40px;
+    height: 200px;
+    background-color: yellow;
+    position: absolute;
+    top: 190px;
+    left: 153px;
+		}
+		#book3 {
+			    width: 40px;
+    height: 200px;
+    background-color: palegreen;
+    position: absolute;
+    top: 190px;
+    left: 196px;
+		}
+		#book4 {
+			    width: 40px;
+    height: 200px;
+    background-color: lightblue;
+    position: absolute;
+    top: 190px;
+    left: 239px;
+		}
+		#book5 {
+			    width: 40px;
+    height: 200px;
+    background-color: rgb(183, 157, 241);
+    position: absolute;
+    top: 190px;
+    left: 282px;
+		}
+		#book6 {
+			    width: 40px;
+    height: 200px;
+    background-color: rgb(238, 124, 121);
+    position: absolute;
+    top: 190px;
+    left: 325px;
+		}
+		#book7 {
+			    width: 40px;
+    height: 200px;
+    background-color: rgb(233, 147, 85);
+    position: absolute;
+    top: 190px;
+    left: 368px;
+		}
+		#book8 {
+			    width: 40px;
+    height: 200px;
+    background-color: yellow;
+    position: absolute;
+    top: 190px;
+    left: 411px;
+		}
+		#book9 {
+			    width: 40px;
+    height: 200px;
+    background-color: palegreen;
+    position: absolute;
+    top: 190px;
+    left: 454px;
+		}
+		#book10 {
+			    width: 40px;
+    height: 200px;
+    background-color: lightblue;
+    position: absolute;
+    top: 190px;
+    left: 497px;
+		}
+		#book11 {
+			    width: 40px;
+    height: 200px;
+    background-color: rgb(183, 157, 241);
+    position: absolute;
+    top: 190px;
+    left: 540px;
+		}
+#projects{
+font-size: 30px;
+font-family: cursive;
+transform: rotate(90deg);
+  transform-origin: -65px 173px;
+  left: px;
+  color: black;
+
+
+}
+#journal{
+font-size: 30px;
+font-family: cursive;
+transform: rotate(90deg);
+  transform-origin: -20px 169px;
+  left: px;
+  color: black;
+
+
+}
+#aboutme{
+font-size: 30px;
+font-family: cursive;
+transform: rotate(90deg);
+  transform-origin: 26px 164px;
+  left: px;
+  color: black;
+
+
+}
+a{
+	text-decoration: none;
+
+}
+
+	</style>
+</head>
+<body>
+	<!-- <p id="title">This is the Homepage</p>
+about me page <a href="aboutme.html">here</a>
+<br><br>
+journal page <a href="journal.html">here</a>
+<br><br>
+projects page <a href="projects.html">here</a> -->
+<div id="shelf"></div>
+<div id="title">Jiyaa's Website</div>
+<div id="cat"></div>
+<div id="book"></div>
+<div id="book1"></div>
+<div id="book2"></div>
+<div id="book3"></div>
+<div id="book4"></div>
+<div id="book5"></div>
+<div id="book6"></div>
+<div id="book7"></div>
+<div id="book8"></div>
+<div id="book9"></div>
+<div id="book10"></div>
+<div id="book11"></div>
+<div id="book12"></div>
+<div id="book13"></div>
+<div id="book14"></div>
+<div id="projects"><a href="projects.html">projects</a></div>
+<div id="journal"><a href="journal.html">journal</a></div>
+<div id="aboutme"><a href="aboutme.html">about me</a></div>
+</body>
+</html>

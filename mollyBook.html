@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+		.page{
+			width:450px;
+			height:600px;
+			border:2px solid grey;
+			display: inline-block;
+			border-radius:5%;
+			padding-top:25px;
+				padding-left:35px;
+		padding-right:35px;
+
+		}
+
+		#rightpage{
+		box-shadow: 10px 10px 5px lightgrey;
+		   animation-duration: 2s;
+		animation-iteration-count: 1;
+	}
+
+	@keyframes pageFlipforRightPage {
+        0% { transform: rotateY(0deg); }
+        50% { transform: rotateY(-90deg); } /* Mid-point of the flip */
+        100% { transform: rotateY(-180deg); }
+    }
+	
+
+
+
+
+		#leftpage{
+		box-shadow: -10px 10px 5px lightgrey;
+		/*animation-name:pageFlipforLeftPage;*/
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+
+		}
+		@keyframes pageFlipforLeftPage {
+        0% { transform: rotateY(0deg); }
+        50% { transform: rotateY(90deg); } /* Mid-point of the flip */
+        100% { transform: rotateY(180deg); }
+    }
+
+		.button{
+			width:50px;
+			height:50px;
+			background-color:blue;
+			position:relative;
+			top:300px;
+		}
+
+	</style>
+</head>
+<body>
+	<center>
+
+	<div class="page" id="leftpage">
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		<div class="button" id="backbutton"></div>
+
+	</div>
+	<div class="page" id="rightpage">
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+		<div class="button" id="nextbutton"></div>
+
+
+	</div>
+
+</center>
+
+<script type="text/javascript">
+
+	function removeLeftPageAnimation(){
+			leftpage.style.animationName=""
+
+	}
+	function removeRightPageAnimation(){
+			rightpage.style.animationName=""
+
+	}
+
+	let x=0;
+
+	nextbutton.addEventListener("click", function(){
+	
+	x=x+1
+	rightpage.style.animationName="pageFlipforRightPage"
+	setTimeout(removeRightPageAnimation, 2000)
+	console.log(x)
+
+	})
+	backbutton.addEventListener("click", function(){
+	
+	x=x-1
+	leftpage.style.animationName="pageFlipforLeftPage"
+	setTimeout(removeLeftPageAnimation, 2000)
+	console.log(x)
+
+	})
+</script>
+</body>
+</html>

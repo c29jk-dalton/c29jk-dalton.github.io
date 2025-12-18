@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  
+
+<style type="text/css">
+	#starbucks{
+		width: 600px;
+		height: 800px;
+		background-image: url(starbucks.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: relative;
+		top: 100px;
+		/*animation-name: shake;*/
+		animation-duration: 0.25s;
+		animation-iteration-count: infinite;
+	}
+	@keyframes shake{
+		0%{
+			transform: rotate(25deg);
+		}
+		50%{
+			transform: rotate(-25deg);
+		}
+		100%{
+			transform: rotate(25deg);
+		}
+	}
+	#splash{
+		width: 400px;
+		height: 400px;
+		background-image: url(splash.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		opacity: 100%;
+		position: relative;
+		top: -600px;
+		opacity: 0;
+
+	}
+</style>
+
+
+</head>
+<body>
+<center>
+	<div id="starbucks"></div>
+	<div id="splash"></div>
+	</center>
+
+	<script type="text/javascript">
+		let click=0;
+		
+		document.addEventListener("click",function(){
+
+			click=click+1
+			if (click==1)
+			{
+
+			starbucks.style.animationName="shake"
+		}
+
+			if (click==2)
+			{
+				splash.style.opacity="1"
+				starbucks.style.animationName="stop"
+
+			}
+
+		})
+
+	</script>
+
+</body>
+</html>

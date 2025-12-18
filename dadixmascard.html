@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+	<style type="text/css">
+		
+
+		body{
+			background-color:rgb(178,244,139);
+		}
+
+		#gift{
+
+			width: 500px;
+			height: 500px;
+			background-image: url(gift1.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 35%;
+			left: 33%;
+
+		}
+		#letter{
+			background-color: rgb(255, 255, 255);
+			width: 100px;
+			height: 150px;
+			font-size:10px ;
+			position: absolute;
+			left: 44%;
+			top: 50%;
+			/*animation-name: grow;*/
+			animation-duration: 2s;
+			animation-iteration-count: 1;
+			opacity: 0;
+			z-index: 1;
+		}
+		@keyframes grow{
+
+			0%{
+
+			}
+
+			100%{
+				width: 500px;
+				height: 750px;
+				font-size: 55px;
+				left: 33%;
+				top: 1%;
+
+			}
+
+		}
+		.doodles{
+			width: 200px;
+			height: 200px;
+		}
+
+		#tree{
+			background-image: url(treedoodle.png);
+			position: relative;
+			background-size: contain;
+			background-repeat: no-repeat;
+
+		}
+		#reindeer{
+			background-image: url(reindeer.png);
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+			left: 300px;
+
+		}
+		#house{
+			background-image: url(housedoodle.png);
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+			left: 600px;
+			top: 0px;
+
+		}
+		#wreath{
+			background-image: url(wreath.png);
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+			left: 900px;
+			width: 300px;
+			height: 300px;
+			top: 200px;
+
+		}
+		#mistletoe{
+			background-image: url(mistletoe.png);
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+			left: 1200px;
+			width: 200px;
+			height: 200px;
+			top: 0px;
+
+		}
+		#ornament{
+			background-image: url(ornament.png);
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 250px;
+			height: 250px;
+			top: 400px;
+
+		}
+		#snowglobe{
+			background-image: url(snowglobe.png);
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 300px;
+			height: 300px;
+			top: 400px;
+			left: 1200px;
+
+		}
+
+
+
+
+	</style>
+
+
+
+
+</head>
+<body>
+
+
+
+	<div id="gift"></div>
+	<p id="letter">
+		Dear Dadi, 
+		<br><br> 
+		Merry Christmas! 
+		<br><br> 
+		I love you very much and I can't wait to see you soon. 
+		<br><br> 
+		Love,
+		<br><br> 
+		Jiyaa
+	</p>
+
+	<div class="doodles" id="tree"></div>
+	<div class="doodles" id="reindeer"></div>
+	<div class="doodles" id="house"></div>
+	<div class="doodles" id="mistletoe"></div>
+	<div class="doodles" id="wreath"></div>
+	<div class="doodles" id="ornament"></div>
+	<div class="doodles" id="snowglobe"></div>
+
+
+
+	<script type="text/javascript">
+		
+		function expand(){
+			letter.style.width="500px"
+			letter.style.height="750px"
+			letter.style.top="1%"
+			letter.style.left="33%"
+			letter.style.fontSize="55px"
+
+		}
+		
+		document.addEventListener("click",function(){
+
+
+			letter.style.animationName="grow"
+
+			letter.style.opacity="1"
+
+			setTimeout(expand,2000)
+
+			
+		
+
+
+		})
+
+	</script>
+
+
+</body>
+</html>

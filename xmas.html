@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+		body{
+			background-color:rgb(178,244,139);
+		}
+
+		#christmastree{
+			width: 700px;
+			height: 700px;
+			background-image:url(xmastree.png) ;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 25%;
+			top: -1000px;
+			animation-name: treeMove;
+			animation-duration: 4s;
+			animation-iteration-count:1;
+			z-index: -3;
+		}
+		@keyframes treeMove{
+			0%{
+				top: -700px;
+			}
+			100%{
+				top: 100px;
+			}
+		}
+		#gift1{
+			width: 200px;
+			height: 200px;
+			background-image:url(gift1.png) ;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 25%;
+			top: -500px;
+			animation-name: gift1Move;
+			animation-duration: 4s;
+			animation-iteration-count:1;
+			z-index: -2;
+		}
+		@keyframes gift1Move{
+			0%{
+				top: -500px;
+			}
+			100%{
+				top: 550px;
+			}
+		}
+		#gift2{
+			width: 200px;
+			height: 200px;
+			background-image:url(gift2.png) ;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 33%;
+			top: -500px;
+			animation-name: gift2Move;
+			animation-duration: 4s;
+			animation-iteration-count:1;
+			z-index: -1;
+		}
+		@keyframes gift2Move{
+			0%{
+				top: -500px;
+			}
+			100%{
+				top: 650px;
+			}
+		}
+		#gift3{
+			width: 200px;
+			height: 200px;
+			background-image:url(gift3.png) ;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left:43%;
+			top: -500px;
+			animation-name: gift3Move;
+			animation-duration: 4s;
+			animation-iteration-count:1;
+
+		}
+		@keyframes gift3Move{
+			0%{
+				top: -500px;
+			}
+			100%{
+				top: 670px;
+			}
+		}
+		#gift4{
+			width: 200px;
+			height: 200px;
+			background-image:url(gift4.png) ;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 53%;
+			top: -500px;
+			animation-name: gift4Move;
+			animation-duration: 4s;
+			animation-iteration-count:1;
+			z-index: -1;
+		}
+		@keyframes gift4Move{
+			0%{
+				top: -500px;
+			}
+			100%{
+				top: 640px;
+			}
+		}
+		#gift5{
+			width: 200px;
+			height: 200px;
+			background-image:url(gift5.png) ;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 60%;
+			top: -500px;
+			animation-name: gift5Move;
+			animation-duration: 4s;
+			animation-iteration-count:1;
+			z-index: -2;
+		}
+		@keyframes gift5Move{
+			0%{
+				top: -500px;
+			}
+			100%{
+				top: 550px;
+			}
+		}
+		#present1{
+			width: 200px;
+			height: 200px;
+			opacity: 0;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 27%;
+			top:500px ;
+		}
+		#present2{
+			width: 200px;
+			height: 200px;
+			opacity: 0;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 37%;
+			top:600px ;
+		}
+		#present3{
+			width: 200px;
+			height: 200px;
+			opacity: 0;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 46%;
+			top:620px ;
+		}
+		#present4{
+			width: 200px;
+			height: 200px;
+			opacity: 0;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 57%;
+			top:600px ;
+		}
+		#present5{
+			width: 200px;
+			height: 200px;
+			opacity: 0;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 64%;
+			top:500px ;
+		}
+		
+		
+		
+
+
+	</style>
+</head>
+<body>
+
+
+
+	<div id="christmastree"></div>
+
+<div class="gifts"id="gift1"></div>
+<div class="gifts"id="gift2"></div>
+<div class="gifts"id="gift3"></div>
+<div class="gifts"id="gift4"></div>
+<div class="gifts"id="gift5"></div>
+
+<div class="presents" id="present1"></div>
+<div class="presents" id="present2"></div>
+<div class="presents" id="present3"></div>
+<div class="presents" id="present4"></div>
+<div class="presents" id="present5"></div>
+
+<script type="text/javascript">
+
+	function christmasTreeTop(){
+		christmastree.style.top="100px"
+	}
+
+	setTimeout( christmasTreeTop, 4000)
+
+
+	function gift1Top(){
+		gift1.style.top="550px"
+	}
+
+	setTimeout(gift1Top, 4000)
+
+	function gift2Top(){
+		gift2.style.top="650px"
+	}
+
+	setTimeout(gift2Top, 4000)
+
+	function gift3Top(){
+		gift3.style.top="670px"
+	}
+
+	setTimeout(gift3Top, 4000)
+
+	function gift4Top(){
+		gift4.style.top="640px"
+	}
+
+	setTimeout(gift4Top, 4000)
+
+	function gift5Top(){
+		gift5.style.top="550px"
+	}
+
+	setTimeout(gift5Top, 4000)
+
+	gift1.addEventListener("click", function(){
+			let randomNumber=Math.round(Math.random()*3)
+
+			present1.style.backgroundImage = "url("+randomNumber+".png)"
+			present1.style.opacity = "1"
+			}
+
+
+		)
+	gift2.addEventListener("click", function(){
+			let randomNumber=Math.round(Math.random()*3)
+
+			present2.style.backgroundImage = "url("+randomNumber+".png)"
+			present2.style.opacity = "1"
+			}
+
+
+		)
+	gift3.addEventListener("click", function(){
+			let randomNumber=Math.round(Math.random()*3)
+
+			present3.style.backgroundImage = "url("+randomNumber+".png)"
+			present3.style.opacity = "1"
+			}
+
+
+		)
+	gift4.addEventListener("click", function(){
+			let randomNumber=Math.round(Math.random()*3)
+
+			present4.style.backgroundImage = "url("+randomNumber+".png)"
+			present4.style.opacity = "1"
+			}
+
+
+		)
+	gift5.addEventListener("click", function(){
+			let randomNumber=Math.round(Math.random()*3)
+
+			present5.style.backgroundImage = "url("+randomNumber+".png)"
+			present5.style.opacity = "1"
+			}
+
+
+		)
+	
+
+</script>
+
+</body>
+</html>

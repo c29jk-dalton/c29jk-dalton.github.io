@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-color: black;
+		}
+		
+		.littles{
+			width: 12px;
+			height: 7px;
+			border: 1px solid black;
+			display: inline-block;
+			position: absolute;
+			transform: rotate(45deg);
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		
+		function makeConfetti (){
+			let confetti = document.createElement("div")
+			confetti.classList.add("littles")
+			document.body.appendChild(confetti)
+			let r = Math.round(Math.random()*255)
+			let g = Math.round(Math.random()*255)
+			let b = Math.round(Math.random()*255)
+
+			confetti.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+			confetti.style.top = Math.random()*2000+"px"
+			confetti.style.left = Math.random()*2000+"px"
+			confetti.style.transform = "rotate("+Math.random()*360+"deg)"
+			function fall(){
+				let fallFactor = 10
+				confetti.style.top = parseInt(confetti.style.top) + fallFactor + "px"
+				if (parseInt(confetti.style.top)>1000) {
+					confetti.style.top = Math.random()*200+"px"
+				}
+			}
+			setInterval(fall,50)
+		}
+
+		setInterval(makeConfetti,50)
+
+
+
+
+
+	</script>
+
+
+
+
+</body>
+</html>

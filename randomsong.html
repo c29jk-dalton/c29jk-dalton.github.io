@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#title{
+			font-size: 50px;
+
+		}
+	</style>
+</head>
+<body>
+<center>
+<div id="title">What Song Should You Listen To?</div>
+</center>
+
+<script type="text/javascript">
+	
+	let song = ["CN Tower", "Pushing it Down and Praying", "Die On This Hill", "Wicked Games", "Sally When the Wine Runs Out", "Midnight Sun", "Greenlight", "Best", "She Calls Me Back", "July", "Matilda", "Talk Talk", "Thinkin Bout You", "Cold Water", "We Are The People", "Cold Water"]
+	document.addEventListener("click", function(){
+		let x = Math.round(Math.random()*15)
+		console.log(x)
+		alert(song[x])
+	})
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

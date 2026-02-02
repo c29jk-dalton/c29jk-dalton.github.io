@@ -9,7 +9,7 @@
 		.littles{
 			width: 12px;
 			height: 7px;
-			border: 1px solid black;
+			/*border: 1px solid black;*/
 			display: inline-block;
 			position: absolute;
 			transform: rotate(45deg);
@@ -33,13 +33,13 @@
 </head>
 <body>
 
-
-
+<button id="btn">Drop Confetti</button>
+<input type="color" value="#E7DDFF" id="colorPicker">
 	<script type="text/javascript">
 		let colors = ["#DEC5E3", "#CDEDFD", "#B6DCFE", "#A9F8FB", "#81F7E5"]
 		
 		
-
+		let dropConfettiBtn = document.getElementById("btn")
 		
 		function makeConfetti (){
 			let confetti = document.createElement("div")
@@ -52,7 +52,8 @@
 		console.log(randomColorIndex)
 
 			// confetti.style.backgroundColor = "rgb("+r+","+g+","+b+")"
-			confetti.style.backgroundColor = colors[randomColorIndex]
+			// confetti.style.backgroundColor = colors[randomColorIndex]
+			confetti.style.backgroundColor = colorPicker.value
 			confetti.style.top = Math.random()*2000+"px"
 			confetti.style.left = Math.random()*2000+"px"
 			confetti.style.transform = "rotate("+Math.random()*360+"deg)"
@@ -73,11 +74,14 @@
 			setInterval(fall,50)
 		}
 
-		setInterval(makeConfetti,20)
+		// setInterval(makeConfetti,20)
 
+		dropConfettiBtn.addEventListener("click", function() {
+			setInterval(makeConfetti, 20)
+		})
 
-
-
+		let colorPicker = document.getElementById("colorPicker")
+		console.log(colorPicker.value)
 
 	</script>
 

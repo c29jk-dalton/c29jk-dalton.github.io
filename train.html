@@ -53,8 +53,16 @@
 		<div class="cart">hola</div> -->
 	</div>
 <script>
-	let people = ["alexis", "stella", "delilah"]
-		let train = document.getElementById("train")
+	let people = ["taylor swift", "tate mcrae", "gracie abrams"]
+	// let plant = {
+	// 	name: "hydrangea",
+	// 	continent: "asia",
+	// 	color: "#D4C2FC",
+	// 	}
+		// console.log(plant)
+	let color = ["#8693AB", "#BDD4E7", "#C5CBE6", "#6D84A0", "#AAB9CF"]
+	let train = document.getElementById("train")
+	
 	
 	function makeTrain (){
 		train.innerHTML = ""
@@ -64,7 +72,11 @@
 		cart.classList.add("cart")
 		cart.textContent = people[i]
 		train.appendChild(cart)
+		for (let i = 4; i < color.length; i++){
+			cart.style.backgroundColor = color[i]
 		}
+		}
+
 	}
 	
 	makeTrain()

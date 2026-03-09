@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#button{
+			position: absolute;
+			background-color: lavender;
+		}
+	</style>
+</head>
+<body>
+
+
+<button id="button">can't click me!</button>
+
+<script type="text/javascript">
+	console.log(window.innerWidth)
+	let badbutton = document.getElementById("button")
+	console.log(badbutton)
+	badbutton.addEventListener("click", function(){
+		console.log("click")
+	})
+	badbutton.addEventListener("mouseover", function(){
+		console.log("mouse is over")
+		badbutton.style.top = Math.random()*window.innerHeight+"px"
+		badbutton.style.left = Math.random()*window.innerWidth+"px"
+	})
+	badbutton.addEventListener("mouseout", function(){
+		console.log("mouse leaves")
+	})
+</script>
+</body>
+
+</html>

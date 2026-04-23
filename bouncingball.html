@@ -9,6 +9,7 @@
 		let ypos
 		let xspeed
 		let yspeed
+		let fillColor = "blue"
 		function setup(){
 		createCanvas(800,800)
 		
@@ -24,18 +25,34 @@
 	}
 	
 		function draw(){
-			background(231, 214, 237)
+			background(247, 244, 234)
 				if (xpos + d/2 > width || xpos - d/2 < 0){
 					xspeed = xspeed * -1
 				}
 				if (ypos + d/2 > height || ypos - d/2 < 0){
 					yspeed *= -1
 				}
+				changeBallColor()
 				xpos+=xspeed
 				ypos+= yspeed
-				fill(255,233,243)
+				fill(fillColor)
 		circle(xpos, ypos, d)
+		
 	}
+	function changeBallColor(){
+			if(xpos>width/2 && ypos<height/2){
+				fillColor = "rgb(222, 217, 226)"
+			}
+			else if(xpos>width/2 && ypos>height/2){
+				fillColor = "rgb(192, 185, 221)"
+			}
+			else if(xpos<width/2 && ypos<height/2){
+				fillColor = "rgb(128, 161, 212)"
+			}
+			else if(xpos,width/2 && ypos>height/2){
+				fillColor = "rgb(117, 201, 200)"
+			}
+		}
 	</script>
 </body>
 </html>
